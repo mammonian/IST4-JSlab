@@ -1,0 +1,142 @@
+body{
+    background-image: url("photo/flowers.jpg");
+    background-size: cover;
+}
+
+h1{
+    padding-top: 62px;
+    padding-bottom: 41px;
+    text-align: center;
+    font-family: 'Kavoon';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 62px;
+    color: #E19A00;
+
+}
+.stylefealde{
+    padding-top: 0px;
+    padding-bottom: 44px;
+    width: 542px;
+    height: 446px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("photo/background.jpg");
+    border: 8px solid #34470C;
+    border-radius: 50px;
+}
+h3{
+    text-align: center;
+    font-family: 'Josefin Sans';
+    font-style: semibold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    color: #032C03;
+}
+
+.h3_1{
+    margin-top: 67px;
+    margin-bottom: 15px;
+}
+
+.stylelist{
+    width: 450px;
+    height: 50px;
+
+    background: #A5A994;
+    border: 4px solid #34470C;
+    border-radius: 30px;
+
+    font-family: 'Josefin Sans', sans-serif; /* Підключіть шрифт у HTML */
+    font-style: normal;
+    font-size: 25px;
+    line-height: 25px;
+
+    color: #032C03;
+    padding-left: 20px; /* Додає трохи відступу для тексту */
+    /*appearance: none; Сховає стандартний вигляд стрілки */
+    outline: none; /* Видаляє стандартну рамку при фокусі */
+    cursor: pointer;
+}
+
+select option[value=""] {
+    color: #C5CAB3;
+  }
+/* Додатково можна додати стилі для стрілки через псевдоелемент 
+.stylelist::after {
+    content: '▼'; /* Імітація стрілки 
+    position: absolute;
+    right: 23px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Щоб стрілка не блокувала кліки 
+    font-size: 20px;
+    color: #032C03;
+}*/
+
+#difficulty{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-left: 46px;
+}
+
+.h3_2{
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+#bugs{
+    margin-top: 0px;
+    margin-bottom: 65px;
+    margin-left: 46px;
+}
+
+.stylebutt{
+    width: 241px;
+    height: 55px;
+
+    background-color: #FFB619;
+    border-radius: 25px;
+    border: 4px solid #FFFFFF;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
+    font-size: 34px;
+    color: #FFFFFF;
+    text-align: center;
+
+    margin-top: 0px;
+    margin-bottom: 65px;
+    margin-left: 150px;
+    cursor: pointer;
+}
+
+#gameStats{
+    padding-top: 42px;
+    padding-left: 49px;
+}
+
+p{
+    font-family: 'Kavon', sans-serif;
+    font-style: normal;
+    font-size: 25px;
+
+    color: #E19A00;
+}
+
+span{
+    font-family: 'Kavoon', sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    justify-content: space-between;
+
+    color: #E19A00;
+}
+
+#hitCounter{
+    margin-top: 0px;
+    margin-bottom: 19px;
+}
