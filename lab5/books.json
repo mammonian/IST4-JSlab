@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "The Pumpkin Spice Cafe",
+        "shortname": "pumpkinspice",
+        "description": "When Jeanie`s aunt gifts her the beloved Pumpkin Spice Café in the small town of Dream Harbor, Jeanie jumps at the chance for a fresh start away from her very dull desk job.",
+        "price": "11 USD",
+        "image": "sloth.png"
+    },
+    {
+        "id": 2,
+        "name": "It Ends With Us",
+        "shortname": "endswithus",
+        "description": "Lily hasn't always had it easy, but that's never stopped her from working hard for the life she wants. She's come a long way from the small town in Maine where she grew up – she graduated from college, moved to Boston, and started her own business. So when she feels a spark with a gorgeous neurosurgeon named Ryle Kincaid, everything in Lily's life suddenly seems almost too good to be true.",
+        "price": "14 USD",
+        "image": "sloth.png"
+    },
+    {
+        "id": 3,
+        "name": "Corrupt",
+        "shortname": "corrupt",
+        "description": "Dreams might be a heart's desire, but nightmares are its obsession in the first novel of a dark romance series from New York Times bestselling author Penelope Douglas. Erika Fane's boyfriend's older brother is handsome, strong, and completely terrifying.",
+        "price": "12 USD",
+        "image": "sloth.png"
+    },
+    {
+        "id": 4,
+        "name": "Dune Messiah",
+        "shortname": "dune",
+        "description": "The extraordinary sequel to Dune, the greatest science fiction novel of all time.",
+        "price": "14 USD",
+        "image": "sloth.png"
+    }
+]

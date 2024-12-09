@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Gosip",
+        "shortname": "gosip",
+        "description": "Beauty as the content for the slaughterhouse that beauty comes from the past blind sight into future iron helmets of mystery and women waiting head inside the universe wired to the wall reading nonsense wondering nonsense with subtle voices they chase the gossip",
+        "price": "590 USD",
+        "image": "sloth.png"
+    },
+    {
+        "id": 2,
+        "name": "PANCAKE Vol. 2",
+        "shortname": "pancake",
+        "description": "Artfully hand-painted on a canvas base using mixed technique, oils and acrylics.",
+        "price": "2994 USD",
+        "image": "sloth.png"
+    },
+    {
+        "id": 3,
+        "name": "Aún hoy",
+        "shortname": "hoy",
+        "description": "In this work, I wanted to capture the ephemeral and poetic essence of the sea, using acrylic and enamel to reflect the dynamic interaction between light and water. ",
+        "price": "1540 USD",
+        "image": "sloth.png"
+    },
+    {
+        "id": 4,
+        "name": "Cobalt Ocean",
+        "shortname": "ocean",
+        "description": "Artist: Vahe Yeremyan Work: Original Oil Painting, Handmade Artwork, One of a Kind",
+        "price": "8000 USD",
+        "image": "sloth.png"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Arctic Monkeys - AM",
+        "shortname": "am",
+        "description": "AM is the fifth studio album by English rock band Arctic Monkeys.",
+        "price": "46 USD",
+        "image": "sloth.png"
+    },
+    {
+        "id": 2,
+        "name": "Red Hot Chili Peppers - Californication",
+        "shortname": "californication",
+        "description": "Californication is the seventh studio album by U.S. rock band Red Hot Chili Peppers, released on June 8, 1999, on Warner Bros. Records.",
+        "price": "53 USD",
+        "image": "sloth.png"
+    },
+    {
+        "id": 3,
+        "name": "Nirvana - Nevermind",
+        "shortname": "nevermind",
+        "description": "Nevermind is the second studio album by the American rock band Nirvana, released on September 24, 1991, by DGC Records.",
+        "price": "53 USD",
+        "image": "sloth.png"
+    },
+    {
+        "id": 4,
+        "name": "The Weeknd - The Highlights",
+        "shortname": "hilights",
+        "description": "The Highlights is the second greatest hits album, and first one released globally, by Canadian singer-songwriter the Weeknd.",
+        "price": "58 USD",
+        "image": "sloth.png"
+    }
+]

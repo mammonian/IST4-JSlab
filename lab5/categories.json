@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Books",
+        "shortname": "books",
+        "notes": "Novelties of the book world"
+    }, 
+    {
+        "id": 2,
+        "name": "Musics",
+        "shortname": "musics",
+        "notes": "Novelties of the music world"
+    },
+    {
+        "id": 3,
+        "name": "Paintings",
+        "shortname": "paintings",
+        "notes": "Novelties of the world of art"
+    }
+]
