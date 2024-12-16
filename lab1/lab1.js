@@ -88,4 +88,4 @@ function triangle(value1, type1, value2, type2) {
 }
 
 // Виклик функції
-triangle(7, "leg", 8, "hypotenuse");
+//triangle(7, "leg", 8, "hypotenuse");
