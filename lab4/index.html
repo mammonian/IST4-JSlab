@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гра</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    #settings {
+      margin-top: 50px;
+    }
+    #game {
+      display: none;
+      position: relative;
+      height: 100vh;
+    }
+    #square {
+      position: absolute;
+      cursor: pointer;
+    }
+    #result {
+      display: none;
+      text-align: center;
+    }
+    #startButton {
+      margin-top: 20px;
+    }
+    #errorMessage {
+      color: red;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="settings">
+    <h1>Налаштування гри</h1>
+    <label for="difficulty">Оберіть складність:</label>
+    <select id="difficulty">
+      <option value="">--Оберіть складність--</option>
+      <option value="easy">Легка</option>
+      <option value="medium">Середня</option>
+      <option value="hard">Складна</option>
+    </select>
+
+    <br><br>
+
+    <label for="color">Оберіть колір квадратика:</label>
+    <select id="color">
+      <option value="">--Оберіть колір--</option>
+      <option value="blue">Блакитний</option>
+      <option value="red">Червоний</option>
+      <option value="yellow">Жовтий</option>
+    </select>
+
+    <br><br>
+
+    <button id="startButton">Старт</button>
+    <p id="errorMessage">Будь ласка, оберіть складність та колір перед початком гри.</p>
+  </div>
+
+  <div id="game">
+    <h2>Таймер: <span id="timer">0</span> сек</h2>
+    <h2>Кількість кліків: <span id="clicks">0</span></h2>
+    <div id="square"></div>
+  </div>
+
+  <div id="result">
+    <h2>Гра завершена!</h2>
+    <p>Кількість кліків: <span id="finalClicks">0</span></p>
+    <button id="restartButton">Почати знову</button>
+  </div>
+
+  <script>
+    // Початкові змінні
+    const difficultySelect = document.getElementById('difficulty');
+    const colorSelect = document.getElementById('color');
+    const startButton = document.getElementById('startButton');
+    const errorMessage = document.getElementById('errorMessage');
+    const gameDiv = document.getElementById('game');
+    const resultDiv = document.getElementById('result');
+    const squareDiv = document.getElementById('square');
+    const timerElement = document.getElementById('timer');
+    const clicksElement = document.getElementById('clicks');
+    const finalClicksElement = document.getElementById('finalClicks');
+    const restartButton = document.getElementById('restartButton');
+    
+    let clickCount = 0;
+    let gameTime = 0; // Змінна для часу
+    let timer;
+    let squareSize = 0;
+    let squareColor = "";
+
+    // Функція для запуску гри
+    startButton.addEventListener('click', function() {
+      const difficulty = difficultySelect.value;
+      const color = colorSelect.value;
+
+      if (!difficulty || !color) {
+        errorMessage.style.display = 'block';
+        return;
+      }
+
+      errorMessage.style.display = 'none';
+      gameDiv.style.display = 'block';
+      document.getElementById('settings').style.display = 'none';
+
+      // Налаштування параметрів гри в залежності від складності
+      if (difficulty === 'easy') {
+        gameTime = 8; 
+        squareSize = 100;
+      } else if (difficulty === 'medium') {
+        gameTime = 6; 
+        squareSize = 70;
+      } else if (difficulty === 'hard') {
+        gameTime = 4; 
+        squareSize = 50;
+      }
+
+      squareColor = color; // Колір квадратика
+      clickCount = 0;
+      clicksElement.textContent = clickCount;
+      timerElement.textContent = gameTime;
+
+      startTimer();
+      moveSquare();
+    });
+
+    // Функція для запуску таймера
+    function startTimer() {
+      timer = setInterval(() => {
+        gameTime--;
+        timerElement.textContent = gameTime;
+        if (gameTime <= 0) {
+          clearInterval(timer);
+          endGame();
+        }
+      }, 1000);
+    }
+
+    // Функція для переміщення 
+    function moveSquare() {
+      const maxX = window.innerWidth - squareSize;
+      const maxY = window.innerHeight - squareSize;
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
+
+      squareDiv.style.left = randomX + 'px';
+      squareDiv.style.top = randomY + 'px';
+      squareDiv.style.width = squareSize + 'px';
+      squareDiv.style.height = squareSize + 'px';
+      squareDiv.style.backgroundColor = squareColor;
+    }
+
+    // Обробка кліка на квадратик
+    squareDiv.addEventListener('click', function() {
+      clickCount++;
+      clicksElement.textContent = clickCount;
+      gameTime = (difficultySelect.value === 'easy') ? 8 : (difficultySelect.value === 'medium') ? 6 : 4; // Відновлення часу
+      timerElement.textContent = gameTime;
+      moveSquare();
+    });
+
+    // Завершення гри
+    function endGame() {
+      gameDiv.style.display = 'none';
+      resultDiv.style.display = 'block';
+      finalClicksElement.textContent = clickCount;
+    }
+
+    // Перезапуск гри
+    restartButton.addEventListener('click', function() {
+      resultDiv.style.display = 'none';
+      document.getElementById('settings').style.display = 'block';
+      difficultySelect.value = '';
+      colorSelect.value = '';
+    });
+  </script>
+</body>
+</html>
