@@ -1,18 +1,24 @@
 function triangle(value1, type1, value2, type2) {
     console.log("Інструкція: Використовуйте два відомих елементи трикутника для обчислення інших. Типи: 'leg' (катет), 'hypotenuse' (гіпотенуза), 'adjacentAngle' (прилеглий кут), 'oppositeAngle' (протилежний кут).");
-    
+
     let a, b, c, alpha, beta;
+
+    // Масив допустимих типів
+    const validTypes = ["leg", "hypotenuse", "adjacentAngle", "oppositeAngle"];
     
-    // Функція для переведення градусів у радіани
-    function toRadians(degrees) {
-        return degrees * (Math.PI / 180);
+    // Перевірка правильності типів
+    if (!validTypes.includes(type1) || !validTypes.includes(type2)) {
+        console.log("Помилка: Невірне значення типу. Перевірте введені типи.");
+        return "failed";
     }
 
-    // Функція для переведення радіан у градуси
-    function toDegrees(radians) {
-        return radians * (180 / Math.PI);
+    // Перевірка сумісності типів
+    if ((type1 === "oppositeAngle" && type2 === "leg") || (type1 === "leg" && type2 === "oppositeAngle")) {
+        console.log("Ця комбінація типів не підтримується.");
+        return "failed";
     }
-
+    
+    // Ваші умови для різних варіантів розв'язку трикутника
     if (type1 === "leg" && type2 === "leg") {
         // Якщо дано два катети
         a = value1;
@@ -83,9 +89,15 @@ function triangle(value1, type1, value2, type2) {
     console.log(`c (гіпотенуза): ${c.toFixed(2)}`);
     console.log(`alpha (кут навпроти a): ${alpha.toFixed(2)}°`);
     console.log(`beta (кут навпроти b): ${beta.toFixed(2)}°`);
-    
+
     return "success";
 }
 
-// Виклик функції
-triangle(7, "leg", 8, "hypotenuse");
+// Допоміжні функції для перетворення градусів і радіанів
+function toRadians(degrees) {
+    return degrees * Math.PI / 180;
+}
+
+function toDegrees(radians) {
+    return radians * 180 / Math.PI;
+}
