@@ -18,7 +18,7 @@ function triangle(value1, type1, value2, type2) {
         return "failed";
     }
     
-    // Ваші умови для різних варіантів розв'язку трикутника
+   
     if (type1 === "leg" && type2 === "leg") {
         // Якщо дано два катети
         a = value1;
@@ -93,7 +93,7 @@ function triangle(value1, type1, value2, type2) {
     return "success";
 }
 
-// Допоміжні функції для перетворення градусів і радіанів
+// Функції для перетворення градусів і радіанів
 function toRadians(degrees) {
     return degrees * Math.PI / 180;
 }
