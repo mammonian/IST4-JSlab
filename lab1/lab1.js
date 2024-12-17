@@ -4,7 +4,7 @@ function triangle(value1, type1, value2, type2) {
     let a, b, c, alpha, beta;
 
     // Масив допустимих типів
-    const validTypes = ["leg", "hypotenuse", "adjacentAngle", "oppositeAngle"];
+    const validTypes = ["leg", "hypotenuse", "adjacent angle", "opposite angle"];
     
     // Перевірка правильності типів
     if (!validTypes.includes(type1) || !validTypes.includes(type2)) {
@@ -13,7 +13,7 @@ function triangle(value1, type1, value2, type2) {
     }
 
     // Перевірка сумісності типів
-    if ((type1 === "oppositeAngle" && type2 === "leg") || (type1 === "leg" && type2 === "oppositeAngle")) {
+    if ((type1 === "opposite angle" && type2 === "leg") || (type1 === "leg" && type2 === "opposite angle")) {
         console.log("Ця комбінація типів не підтримується.");
         return "failed";
     }
@@ -42,7 +42,7 @@ function triangle(value1, type1, value2, type2) {
         b = Math.sqrt(c * c - a * a);
         alpha = toDegrees(Math.asin(a / c));
         beta = 90 - alpha;
-    } else if ((type1 === "leg" && type2 === "adjacentAngle") || (type1 === "adjacentAngle" && type2 === "leg")) {
+    } else if ((type1 === "leg" && type2 === "adjacent angle") || (type1 === "adjacent angle" && type2 === "leg")) {
         // Якщо дано катет і прилеглий гострий кут
         if (type1 === "leg") {
             a = value1;
@@ -54,7 +54,7 @@ function triangle(value1, type1, value2, type2) {
         c = a / Math.cos(toRadians(alpha));
         b = Math.sqrt(c * c - a * a);
         beta = 90 - alpha;
-    } else if ((type1 === "leg" && type2 === "oppositeAngle") || (type1 === "oppositeAngle" && type2 === "leg")) {
+    } else if ((type1 === "leg" && type2 === "opposite angle") || (type1 === "opposite angle" && type2 === "leg")) {
         // Якщо дано катет і протилежний гострий кут
         if (type1 === "leg") {
             a = value1;
@@ -66,7 +66,7 @@ function triangle(value1, type1, value2, type2) {
         c = a / Math.sin(toRadians(alpha));
         b = Math.sqrt(c * c - a * a);
         beta = 90 - alpha;
-    } else if ((type1 === "hypotenuse" && type2 === "adjacentAngle") || (type1 === "adjacentAngle" && type2 === "hypotenuse")) {
+    } else if ((type1 === "hypotenuse" && type2 === "adjacent angle") || (type1 === "adjacent angle" && type2 === "hypotenuse")) {
         // Якщо дано гіпотенузу і прилеглий гострий кут
         if (type1 === "hypotenuse") {
             c = value1;
